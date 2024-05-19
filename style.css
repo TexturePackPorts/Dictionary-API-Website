@@ -1,0 +1,302 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #f0f0f3, #e0e0e5);
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: linear-gradient(135deg, #1f1f1f, #292929);
+    color: #eaeaea;
+}
+
+body.dark-mode header {
+    background: rgba(40, 40, 40, 0.8);
+}
+
+body.dark-mode footer {
+    background: rgba(40, 40, 40, 0.8);
+}
+
+body.dark-mode input[type="text"] {
+    background: rgba(50, 50, 50, 0.8);
+    color: #eaeaea;
+    border: 2px solid #6200ea;
+}
+
+body.dark-mode button {
+    background: rgba(60, 60, 60, 0.8);
+}
+
+body.dark-mode button:hover {
+    background: rgba(80, 80, 80, 0.8);
+}
+
+body.dark-mode .container p {
+    color: #eaeaea;
+}
+
+/* Header styles */
+header {
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #6200ea;
+    animation: fadeIn 1s ease-out;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+    animation: fadeIn 1.5s ease-out;
+}
+
+header #theme-toggle {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 2s ease-out;
+}
+
+header #theme-toggle:hover {
+    background: #3700b3;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+header #theme-toggle:active {
+    transform: scale(0.98);
+}
+
+/* Main content styles */
+main {
+    flex: 1;
+    width: 100%;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.5);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    transition: background 0.3s, box-shadow 0.3s;
+    animation: slideIn 1s ease-out;
+}
+
+body.dark-mode section {
+    background: rgba(30, 30, 30, 0.8);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    margin-top: 0;
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #6200ea;
+}
+
+p {
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.code-block {
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s ease-out;
+}
+
+body.dark-mode .code-block {
+    background: rgba(30, 30, 30, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.code-block pre {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    color: #333;
+}
+
+body.dark-mode .code-block pre {
+    color: #eaeaea;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.copy-btn:hover {
+    background: #3700b3;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.copy-btn:active {
+    transform: scale(0.98);
+}
+
+.copy-btn i {
+    margin-right: 5px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 15px;
+    font-size: 1em;
+    border: 2px solid #6200ea;
+    border-radius: 25px;
+    margin-right: 10px;
+    background: white;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #3700b3;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1em;
+    background: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background: #3700b3;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#definitionContainer {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s ease-out;
+}
+
+body.dark-mode #definitionContainer {
+    background: rgba(30, 30, 30, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#definitionContainer h3 {
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #6200ea;
+}
+
+#definitionContainer p {
+    margin: 5px 0;
+    font-weight: 400;
+}
+
+/* Footer styles */
+footer {
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
